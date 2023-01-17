@@ -25,3 +25,17 @@ def delete(request,id):
     charity = Charityorg.objects.get(id=id)
     charity.delete()
     return redirect("/all-charityorganization")
+
+def edit(request,id):
+    charity = Charityorg.objects.get(id=id)
+    return render(request,"edit.html",{"charityorganization":charity})
+
+def update(request,id):
+    charity = Charityorg.objects.get(id=id)
+    form = charityForm(request.POST,instance=charity)
+
+    if form.is_valid():
+        form.save()
+        return redirect("/all-charityorganization")
+
+    return render(request,"edit.html",{"charityorganization":charity})

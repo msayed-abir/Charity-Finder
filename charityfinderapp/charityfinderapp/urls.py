@@ -22,4 +22,6 @@ urlpatterns = [
     path('create',views.create),
     path('all-charityorganization',views.show),
     path('delete/<int:id>',views.delete),
+    path('edit/<int:id>',views.edit),
+    path('update/<int:id>',views.update),
 ]
