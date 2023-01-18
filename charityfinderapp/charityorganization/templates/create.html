@@ -3,36 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Charity Organizations Information</title>
+    <style>
+        body {
+            margin:0;
+            background: #FFFFE8;
+        }
+        .div1 {
+            background: rgba(0, 76, 153, 0.3);
+            text-align:center;
+            margin:1;
+            padding:1px 0px 1px 0px;
+        }
+        input
+        {
+            font-size:20px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1 style="color:pink; text-align:center;">Add New Record of Charity Organizations</h1>
+    <div class="div1">
+        <h1 style="text-shadow: 2px 2px 5px #C85C8E; color:blue; border-style: inset;border-radius: 20px;">Welcome to Our Site</h1>
+        <a href="/all-charityorganization" style="float:right; font-size:20px;margin-right:5%;">Home</a>
+    </div>
 
-    <form action="/create" method="post">
+    <h1 style="color:#C85C8E; text-align:center; border-style: inset;border-radius: 20px; margin: 50px 20% 5px 20%;">Add New Record of Charity Organization</h1>
+
+    <br>
+    <br>
+
+    <div style=" font-size:20px; width: 60%; margin-left:20%; margin-right:20%; border-style: outset;">
+    <form action="/create" method="post" style="margin-left:10%; padding-top:10%; padding-bottom:5%">
 
         {% csrf_token %}
 
         <div>
-            <label>CharityOrg Registration Number</label>
+            <label style="margin-right:10%">CharityOrg Registration Number:</label>
             {{form.reg_number}}
         </div>
+        <br>
         <div>
-            <label>Name of Charity Organization</label>
+            <label style="margin-right:13%">Name of Charity Organization:</label>
             {{form.name}}
         </div>
+        <br>
         <div>
-            <label>Email</label>
+            <label style="margin-right:31%">Email Address:</label>
             {{form.email}}
         </div>
+        <br>
         <div>
-            <label>Contact</label>
+            <label style="margin-right:39%">Contact:</label>
             {{form.contact}}
         </div>
 
         <br>
 
         <div>
-            <button type="submit">Submit</button>
+            <button type="submit" style="background: rgba(0, 76, 153, 0.3); color:#C85C8E; font-size:18px;width:16%;height:18%; border-radius: 20px; margin:0% 40%; border-style: outset;">Submit</button>
         </div>
     </form>
+    </div>
 </body>
 </html>

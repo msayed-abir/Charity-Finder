@@ -3,19 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Showing all Organizations</title>
+    <style>
+        body {
+            margin:0;
+            background: #FFFFE8;
+        }
+        .div1 {
+            background: rgba(0, 76, 153, 0.3);
+            text-align:center;
+            margin:1;
+            padding:1px 0px 1px 0px;
+
+        }
+        tr:nth-child(even){background-color: #E1D7C6}
+        tr:hover {background-color: coral;}
+        th,td {
+            text-align:center;
+        }
+
+    </style>
 </head>
 <body>
-    <a href="/create">
-        <button>Add New Organization</button>
-    </a>
+    <div class="div1">
+        <h1 style="text-shadow: 2px 2px 5px #C85C8E; color:blue; border-style: inset;border-radius: 20px;">Welcome to Our Site</h1>
+    </div>
+
+    <h1 style="color:#C85C8E; text-align:center; border-style: inset;border-radius: 20px; margin: 50px 35% 5px 35%;">List Of All Organizations</h1>
+
+
+        <button style="background: rgba(0, 76, 153, 0.3); font-size:18px;width:16%;height:18%; border-radius: 20px; margin-left:74%; border-style: outset;"><a href="/create" style="color:#C85C8E;text-decoration:none;">Add New Organization</a></button>
+
     <br>
-    <table>
+    <br>
+    <table style=" font-size:20px; width: 80%; margin-left:10%; margin-right:10%; border-style: outset;">
         <thead>
             <tr>
-                <th style="border:1px solid red">Reg Number</th>
-                <th style="border:1px solid red">Name</th>
-                <th style="border:1px solid red">Email</th>
-                <th style="border:1px solid red">Contact</th>
+                <th style="border:1px solid red;">Registration Number</th>
+                <th style="border:1px solid red">Name of Organnization</th>
+                <th style="border:1px solid red">Email Address</th>
+                <th style="border:1px solid red">Contacts</th>
                 <th style="border:1px solid blue">Action</th>
             </tr>
         </thead>
@@ -28,8 +54,8 @@
                 <td style="border:1px solid red">{{charityorganization.email}}</td>
                 <td style="border:1px solid red">{{charityorganization.contact}}</td>
                 <td style="border:1px solid blue">
-                    <a href="/edit/{{charityorganization.id}}">Edit</a>
-                    <a href="/delete/{{charityorganization.id}}">Delete</a>
+                    <a href="/edit/{{charityorganization.id}}" style="float:left;">Edit</a>
+                    <a href="/delete/{{charityorganization.id}}" style="float:right;">Delete</a>
                 </td>
             </tr>
 
