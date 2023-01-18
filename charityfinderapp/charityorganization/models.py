@@ -4,7 +4,7 @@ from django.db import models
 
 class Charityorg(models.Model):
     reg_number = models.CharField(max_length=7)
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=70)
     email = models.CharField(max_length=40)
     contact = models.IntegerField(20)
 
